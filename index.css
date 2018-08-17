@@ -1,0 +1,171 @@
+/* BASE STYLES */
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: rgba(128, 128, 128, 0.25);
+}
+
+html {
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font: 1em / 1 sans;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100%;
+}
+
+
+main,
+li {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+figure,
+ol,
+ul {
+  margin: 0 0 0 0;
+  padding: 0;
+}
+
+input,
+textarea,
+select,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+strong {
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  margin: 1.5em 0;
+  border-bottom: 1px solid;
+}
+
+a,
+button {
+  color: inherit;
+  transition: all 0.3s;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  outline: none;
+}
+
+button {
+  overflow: visible;
+  border: 0;
+  font: inherit;
+  -webkit-font-smoothing: inherit;
+  letter-spacing: inherit;
+  background: none;
+  cursor: pointer;
+}
+
+::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+*:focus {
+  outline: 0;
+}
+
+:focus-visible {
+  outline: outline 1px solid red;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+pre {
+  overflow-x: scroll;
+}
+
+form {
+  display: block;
+  width: 100%;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+
+/** BEGIN: Sticky footer: This part makes the footer stick to the bottom of the page */
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+body > div:first-of-type {
+  flex: 1 0 auto;
+}
+/* END */
+
+
+/** BEGIN: Fullscreen app viewport: This part together with the minimum-scale=1, maximum-scale=1 in the viewport meta tag in index.html makes the site behave more like a native app. 
+ * The downside is that the site will not be zoomalble or scrollable which could be bad for accessibility. 
+ * The sticky footer would be pushed out of view using this, so fixing it to the bottom instead
+ */
+html,
+body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+body > footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* END */

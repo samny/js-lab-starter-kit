@@ -1,0 +1,20 @@
+{
+  "presets": [
+      ["env"], ["react"]
+  ],
+  "env": {
+    "targets": {
+      "browsers": ["last 2 versions"],
+      "node": "current"
+    },
+    "node": {
+      "plugins": [      
+        ["babel-plugin-transform-assets-import-to-string", {
+          "baseUri":"",
+          "baseDir": "",
+          "extensions": [".jpg", ".png", ".svg", ".webp", ".css"]
+        }]
+      ]
+    }
+  }
+}
