@@ -4,6 +4,8 @@
 
 ## Usage
 
+Download the [latest release](https://github.com/samny/js-lab-starter-kit/releases).
+
 ### Development
 
 Run `npm start` in a terminal and direct your web browser to http://localhost:1234
